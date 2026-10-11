@@ -1,0 +1,140 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+
+	"base styles": {
+    "prefix": "reset",
+    "description": "base CSS styles",
+    "body": [
+      "@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');",
+      "",
+      "*,",
+      "*::before,",
+      "*::after {",
+      "\tmargin: 0;",
+      "\tpadding: 0;",
+      "\tbox-sizing: border-box;",
+      "}",
+      "",
+      ":root {",
+      "\t/* fonts */",
+      "\t--font-inter: 'Inter', sans-serif;",
+      "\t--font-space-grotesk: 'Space Grotesk', sans-serif;",
+      "\t--font-roboto-mono: 'Roboto Mono', monospace;",
+      "\t--font-16: 1.6rem;",
+      "\t--font-18: 1.8rem;",
+      "\t--font-24: 2.4rem;",
+      "\t--font-32: 3.2rem;",
+      "\t--font-80: 8rem;",
+      "",
+      "\t/* spacings */",
+      "\t--spacing-4: 0.4rem;",
+      "\t--spacing-8: 0.5rem;",
+      "\t--spacing-16: 1.6rem;",
+      "\t--spacing-20: 2rem;",
+      "\t--spacing-24: 2.4rem;",
+      "\t--spacing-32: 3.2rem;",
+      "",
+      "\t/* colours */",
+      "\t--background: rgb(14,14,14);",
+      "\t--text: hsl(0 0% 98%);",
+      "\t--text-invert: hsl(from var(--text) calc(h + 180) s calc(100 - l));",
+      "\t--accent: rgb(255, 25, 56);",
+      "",
+      "\t/* general */",
+      "\t--radius: 0.6rem;",
+      "\tscrollbar-color: var(--accent) var(--background);",
+      "\tscrollbar-gutter: stable;",
+      "}",
+      "",
+      "html {",
+      "\tfont-size: 62.5%;",
+      "}",
+      "",
+      "html,",
+      "body {",
+      "\theight: 100%;",
+      "}",
+      "",
+      "body {",
+      "\tfont-family: var(--font-inter);",
+      "\tfont-size: var(--font-18);",
+      "\tcolor: var(--text);",
+      "\tbackground-color: var(--background);",
+      "}",
+      "",
+      "h1 {",
+      "\tfont-size: var(--font-32);",
+      "}",
+      "",
+      "h2 {",
+      "\tfont-size: var(--font-24);",
+      "}",
+      "",
+      "a {",
+      "\tfont-weight: 700;",
+      "\ttext-decoration: none;",
+      "\tcolor: var(--accent);",
+      "}",
+      "",
+      "a:hover {",
+      "\ttext-decoration: underline;",
+      "}",
+      "",
+      "\t:focus-visible {",
+      "\toutline: 2px solid var(--accent);",
+      "\toutline-offset: 4px;",
+      "}",
+      "",
+      "\t::selection {",
+      "\tbackground-color: var(--accent);",
+      "\tcolor: var(--text-invert);",
+      "}",
+       "",
+      "\t::-moz-selection {",
+      "\tbackground-color: var(--accent);",
+      "\tcolor: var(--text-invert);",
+      "}"
+    ]
+  },
+  "media query": {
+    "prefix": "media",
+    "description": "Media query ",
+    "body": [
+      "@media (min-width: $1) {",
+      "  $2",
+      "}"
+    ]
+  },
+  "container": {
+    "prefix": "container",
+    "description": "container",
+    "body": [
+      ".container {",
+      "\twidth: 100%;",
+      "\tmax-inline-size: 1440px;",
+      "\tmargin-inline: auto;",
+      "}"
+    ]
+  }
+}
